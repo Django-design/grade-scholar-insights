@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
@@ -15,13 +14,6 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="relative">
-            <div className="flex justify-center items-center mb-6">
-              <img
-                src="public/lovable-uploads/98790847-44d5-4395-a208-cb9f6e79785a.png"
-                alt="Rick and Morty Portal"
-                className="w-64 h-64 mx-auto"
-              />
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Wubba Lubba Dub Dub! Find Your Perfect Scholarship!
             </h1>
@@ -92,7 +84,7 @@ const Index = () => {
             <div className="relative">
               <img
                 src="https://i.imgur.com/8CPZUPJ.png"
-                alt="Morty thinking"
+                alt="Morty thinking about scholarships"
                 className="w-24 h-24 mx-auto mb-4 animate-float"
               />
               <h2 className="text-3xl font-bold mb-4">Find Your Scholarships</h2>
@@ -163,4 +155,3 @@ const Index = () => {
 };
 
 export default Index;
-
