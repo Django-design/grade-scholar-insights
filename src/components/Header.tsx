@@ -5,7 +5,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <GraduationCap className="h-8 w-8 text-scholar-primary" />
-          <span className="text-2xl font-bold bg-gradient-to-r from-scholar-primary to-scholar-secondary bg-clip-text text-transparent">Khem Raj Adhikari</span>
+          <span className="text-2xl font-bold bg-gradient-to-r from-scholar-primary to-scholar-secondary bg-clip-text text-transparent">ScholarAI</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-gray-700 hover:text-scholar-primary font-medium">
