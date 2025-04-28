@@ -2,10 +2,8 @@ import Layout from "@/components/Layout";
 import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Search, School, User } from "lucide-react";
-
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       <section className="bg-gradient-to-r from-scholar-portal via-scholar-primary to-scholar-accent py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-scholar-portalBg opacity-70"></div>
@@ -20,14 +18,12 @@ const Index = () => {
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Hey Morty *burp* we need to find you some scholarships! Let's use this *burp* advanced AI to match your brainwaves with educational opportunities!
             </p>
-            <Button
-              size="lg"
-              className="bg-scholar-accent text-black hover:bg-scholar-accent/90 font-bold"
-              onClick={() => {
-                const formSection = document.getElementById("scholarship-form");
-                formSection?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
+            <Button size="lg" className="bg-scholar-accent text-black hover:bg-scholar-accent/90 font-bold" onClick={() => {
+            const formSection = document.getElementById("scholarship-form");
+            formSection?.scrollIntoView({
+              behavior: "smooth"
+            });
+          }}>
               Start Your Search
             </Button>
           </div>
@@ -82,11 +78,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="relative">
-              <img
-                src="https://i.imgur.com/8CPZUPJ.png"
-                alt="Morty thinking about scholarships"
-                className="w-24 h-24 mx-auto mb-4 animate-float"
-              />
+              <img alt="Morty thinking about scholarships" src="/lovable-uploads/7e6acd16-9473-4454-abf3-291860fd6920.jpg" className="w-24 h-24 mx-auto mb-4 animate-float object-contain" />
               <h2 className="text-3xl font-bold mb-4">Find Your Scholarships</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Don't be scared Morty, just fill out the form below and our AI will find the best scholarships for you!
@@ -138,20 +130,16 @@ const Index = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Listen Morty, *burp* education is important! Join thousands of students who have used ScholarAI to find scholarships!
           </p>
-          <Button
-            size="lg"
-            className="bg-scholar-accent hover:bg-scholar-accent/90 text-black font-bold"
-            onClick={() => {
-              const formSection = document.getElementById("scholarship-form");
-              formSection?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
+          <Button size="lg" className="bg-scholar-accent hover:bg-scholar-accent/90 text-black font-bold" onClick={() => {
+          const formSection = document.getElementById("scholarship-form");
+          formSection?.scrollIntoView({
+            behavior: "smooth"
+          });
+        }}>
             Get Started Now
           </Button>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
