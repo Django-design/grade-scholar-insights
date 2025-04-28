@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
@@ -7,30 +6,37 @@ import { Award, GraduationCap, Search, School, User } from "lucide-react";
 const Index = () => {
   return (
     <Layout>
-      <section className="bg-gradient-to-r from-scholar-primary to-scholar-secondary py-20">
+      <section className="bg-gradient-to-r from-scholar-primary via-scholar-secondary to-scholar-accent py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Find Your Perfect Scholarship Match with AI
-          </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Discover scholarship opportunities tailored to your academic profile, test scores, and personal background.
-          </p>
-          <Button
-            size="lg"
-            className="bg-white text-scholar-primary hover:bg-white/90"
-            onClick={() => {
-              const formSection = document.getElementById("scholarship-form");
-              formSection?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Start Your Search
-          </Button>
+          <div className="relative">
+            <img
+              src="https://i.imgur.com/Q7xp6NI.png"
+              alt="Morty"
+              className="w-32 h-32 mx-auto mb-4 animate-bounce"
+            />
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Aw Geez! Let's Find Your Perfect Scholarship!
+            </h1>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Don't worry Morty, we'll help you discover scholarship opportunities that match your academic profile!
+            </p>
+            <Button
+              size="lg"
+              className="bg-white text-scholar-primary hover:bg-white/90"
+              onClick={() => {
+                const formSection = document.getElementById("scholarship-form");
+                formSection?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Start Your Search
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">How It Works, Morty!</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm text-center">
               <div className="h-16 w-16 bg-scholar-accent rounded-full flex items-center justify-center mx-auto mb-4">
@@ -75,10 +81,17 @@ const Index = () => {
       <section id="scholarship-form" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Find Your Scholarships</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Complete the form below and let our AI-powered system find the best scholarship opportunities for you.
-            </p>
+            <div className="relative">
+              <img
+                src="https://i.imgur.com/8CPZUPJ.png"
+                alt="Morty thinking"
+                className="w-24 h-24 mx-auto mb-4"
+              />
+              <h2 className="text-3xl font-bold mb-4">Find Your Scholarships</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Don't be scared Morty, just fill out the form below and our AI will find the best scholarships for you!
+              </p>
+            </div>
           </div>
           <ScholarshipForm />
         </div>
