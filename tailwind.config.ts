@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,12 +26,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FFC857",
-          foreground: "#1A1F2C",
+          DEFAULT: "#3CD861", // Bright green from portal
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#FF9B54",
-          foreground: "#FFFFFF",
+          DEFAULT: "#86E229", // Lighter green from portal
+          foreground: "#000000",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -41,8 +42,8 @@ export default {
           foreground: "#6B7280",
         },
         accent: {
-          DEFAULT: "#97CE4C",
-          foreground: "#FFFFFF",
+          DEFAULT: "#DAFC4A", // Yellow-green from portal
+          foreground: "#000000",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -63,11 +64,15 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         scholar: {
-          primary: "#FFC857",
-          secondary: "#FF9B54",
-          accent: "#97CE4C",
+          primary: "#3CD861", // Bright green from portal
+          secondary: "#86E229", // Lighter green from portal
+          accent: "#DAFC4A", // Yellow-green from portal
           muted: "#E5E7EB",
-          text: "#1A1F2C"
+          text: "#1A1F2C",
+          portal: "#177F3D", // Darker green from portal
+          portalBg: "#0E4B24", // Even darker green for backgrounds
+          rick: "#75E6DA", // Blue for Rick's hair
+          morty: "#F9C74F" // Yellow for Morty's shirt
         }
       },
       borderRadius: {
@@ -91,11 +96,21 @@ export default {
           to: {
             height: '0'
           }
+        },
+        'portal-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'portal-spin': 'portal-spin 10s linear infinite',
+        'float': 'float 3s ease-in-out infinite'
       }
     }
   },
