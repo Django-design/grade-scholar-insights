@@ -2,8 +2,18 @@ import Layout from "@/components/Layout";
 import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Search, School, User } from "lucide-react";
+import SpaceshipPortalAnimation from "@/components/animations/SpaceshipPortalAnimation";
+import Head from "@/components/Head";
+
 const Index = () => {
-  return <Layout>
+  return (
+    <Layout>
+      <Head
+        title="ScholarAI - Find Your Perfect Scholarship"
+        description="Use our advanced AI to match your profile with thousands of scholarship opportunities. Rick and Morty themed scholarship search engine."
+        keywords="scholarships, education funding, Rick and Morty, college scholarships, scholarship matching"
+      />
+      
       <section className="bg-gradient-to-r from-scholar-portal via-scholar-primary to-scholar-accent py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-scholar-portalBg opacity-70"></div>
@@ -19,14 +29,22 @@ const Index = () => {
               Hey Morty *burp* we need to find you some scholarships! Let's use this *burp* advanced AI to match your brainwaves with educational opportunities!
             </p>
             <Button size="lg" className="bg-scholar-accent text-black hover:bg-scholar-accent/90 font-bold" onClick={() => {
-            const formSection = document.getElementById("scholarship-form");
-            formSection?.scrollIntoView({
-              behavior: "smooth"
-            });
-          }}>
+              const formSection = document.getElementById("scholarship-form");
+              formSection?.scrollIntoView({
+                behavior: "smooth"
+              });
+            }}>
               Start Your Search
             </Button>
           </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-scholar-portalBg">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-6 text-white">Portal Adventures</h2>
+          <SpaceshipPortalAnimation />
+          <p className="text-center text-white/80 mt-4">Watch as Rick's spaceship travels through dimensions while his portal gun spills its green substance!</p>
         </div>
       </section>
 
@@ -140,6 +158,8 @@ const Index = () => {
           </Button>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default Index;
