@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -8,49 +7,44 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: "",
+    message: ""
   });
-  
   const [loading, setLoading] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const {
+      name,
+      value
+    } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+        description: "Thank you for contacting us. We'll get back to you soon."
       });
       setLoading(false);
       setFormData({
         name: "",
         email: "",
         subject: "",
-        message: "",
+        message: ""
       });
     }, 1500);
   };
-
-  return (
-    <Layout>
+  return <Layout>
       <section className="bg-gradient-to-r from-scholar-primary to-scholar-secondary py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -73,7 +67,7 @@ const Contact = () => {
                       <Mail className="h-6 w-6 text-scholar-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Email</h3>
-                    <p className="text-gray-600">support@scholarai.com</p>
+                    <p className="text-gray-600">121immigrationservices@gmail.com</p>
                     <p className="text-gray-600">info@scholarai.com</p>
                   </div>
                 </CardContent>
@@ -86,8 +80,8 @@ const Contact = () => {
                       <Phone className="h-6 w-6 text-scholar-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">Mon-Fri, 9am-5pm EST</p>
+                    <p className="text-gray-600">+9779829997364</p>
+                    <p className="text-gray-600">Mon-Fri, 9am-5pm CET</p>
                   </div>
                 </CardContent>
               </Card>
@@ -99,8 +93,8 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-scholar-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Address</h3>
-                    <p className="text-gray-600">123 Education Lane</p>
-                    <p className="text-gray-600">San Francisco, CA 94105</p>
+                    <p className="text-gray-600">MIJ</p>
+                    <p className="text-gray-600">Scarborugh, Canada</p>
                   </div>
                 </CardContent>
               </Card>
@@ -112,59 +106,25 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Your Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Input id="name" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Input id="email" name="email" type="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      placeholder="What is this regarding?"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Input id="subject" name="subject" placeholder="What is this regarding?" value={formData.subject} onChange={handleChange} required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Your message here..."
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Textarea id="message" name="message" placeholder="Your message here..." rows={5} value={formData.message} onChange={handleChange} required />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-scholar-primary hover:bg-scholar-primary/90"
-                    disabled={loading}
-                  >
+                  <Button type="submit" className="w-full bg-scholar-primary hover:bg-scholar-primary/90" disabled={loading}>
                     {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
@@ -206,8 +166,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Contact;
