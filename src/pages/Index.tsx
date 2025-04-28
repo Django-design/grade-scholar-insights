@@ -2,7 +2,7 @@
 import Layout from "@/components/Layout";
 import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
-import { Award, GraduationCap, Portal, Search, School, User } from "lucide-react";
+import { Award, GraduationCap, Search, School, User } from "lucide-react";
 
 const Index = () => {
   return (
@@ -163,3 +163,4 @@ const Index = () => {
 };
 
 export default Index;
+
