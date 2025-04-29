@@ -1,11 +1,17 @@
 
 import Layout from "@/components/Layout";
-import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Search, School, User } from "lucide-react";
 import Head from "@/components/Head";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
+  const startScholarshipForm = () => {
+    navigate("/scholarship/name");
+  };
+
   return (
     <Layout>
       <Head
@@ -28,12 +34,11 @@ const Index = () => {
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Hey Morty *burp* we need to find you some scholarships! Let's use this *burp* advanced AI to match your brainwaves with educational opportunities!
             </p>
-            <Button size="lg" className="bg-scholar-accent text-black hover:bg-scholar-accent/90 font-bold" onClick={() => {
-              const formSection = document.getElementById("scholarship-form");
-              formSection?.scrollIntoView({
-                behavior: "smooth"
-              });
-            }}>
+            <Button 
+              size="lg" 
+              className="bg-scholar-accent text-black hover:bg-scholar-accent/90 font-bold"
+              onClick={startScholarshipForm}
+            >
               Start Your Search
             </Button>
           </div>
@@ -84,21 +89,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="scholarship-form" className="py-16 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="relative">
-              <img alt="Morty thinking about scholarships" src="/lovable-uploads/7e6acd16-9473-4454-abf3-291860fd6920.jpg" className="w-24 h-24 mx-auto mb-4 object-contain" />
-              <h2 className="text-3xl font-bold mb-4">Find Your Scholarships</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Don't be scared Morty, just fill out the form below and our AI will find the best scholarships for you!
-              </p>
-            </div>
-          </div>
-          <ScholarshipForm />
-        </div>
-      </section>
-
       <section className="bg-black/5 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md border-2 border-scholar-primary">
@@ -140,12 +130,11 @@ const Index = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Listen Morty, *burp* education is important! Join thousands of students who have used ScholarAI to find scholarships!
           </p>
-          <Button size="lg" className="bg-scholar-accent hover:bg-scholar-accent/90 text-black font-bold" onClick={() => {
-          const formSection = document.getElementById("scholarship-form");
-          formSection?.scrollIntoView({
-            behavior: "smooth"
-          });
-        }}>
+          <Button 
+            size="lg" 
+            className="bg-scholar-accent hover:bg-scholar-accent/90 text-black font-bold"
+            onClick={startScholarshipForm}
+          >
             Get Started Now
           </Button>
         </div>
