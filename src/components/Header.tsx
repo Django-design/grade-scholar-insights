@@ -1,5 +1,5 @@
 
-import { ChevronDown, GraduationCap, Menu, Search, University, Calculator,News, UserRound } from "lucide-react";
+import { ChevronDown, GraduationCap, Menu, Search, University, Calculator,Newspaper, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import {
@@ -81,7 +81,7 @@ const Header = () => {
               <DropdownMenuSeparator />
               
               <DropdownMenuItem>
-                <Link to="/news" className="flex items-center w-full">
+                <Link to="/newspaper" className="flex items-center w-full">
                   <News className="mr-2 h-4 w-4" /> Latest News
                 </Link>
               </DropdownMenuItem>
