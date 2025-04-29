@@ -1,8 +1,8 @@
+
 import Layout from "@/components/Layout";
 import ScholarshipForm from "@/components/scholarship/ScholarshipForm";
 import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Search, School, User } from "lucide-react";
-import SpaceshipPortalAnimation from "@/components/animations/SpaceshipPortalAnimation";
 import Head from "@/components/Head";
 
 const Index = () => {
@@ -17,7 +17,7 @@ const Index = () => {
       <section className="bg-gradient-to-r from-scholar-portal via-scholar-primary to-scholar-accent py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-scholar-portalBg opacity-70"></div>
-          <div className="w-[500px] h-[500px] absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 bg-scholar-portal rounded-full opacity-70 animate-portal-spin"></div>
+          <div className="w-[500px] h-[500px] absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 bg-scholar-portal rounded-full opacity-70"></div>
           <div className="w-[300px] h-[300px] absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 bg-scholar-accent rounded-full opacity-40 blur-sm"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -37,14 +37,6 @@ const Index = () => {
               Start Your Search
             </Button>
           </div>
-        </div>
-      </section>
-
-      <section className="py-8 bg-scholar-portalBg">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6 text-white">Portal Adventures</h2>
-          <SpaceshipPortalAnimation />
-          <p className="text-center text-white/80 mt-4">Watch as Rick's spaceship travels through dimensions while his portal gun spills its green substance!</p>
         </div>
       </section>
 
@@ -96,7 +88,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="relative">
-              <img alt="Morty thinking about scholarships" src="/lovable-uploads/7e6acd16-9473-4454-abf3-291860fd6920.jpg" className="w-24 h-24 mx-auto mb-4 animate-float object-contain" />
+              <img alt="Morty thinking about scholarships" src="/lovable-uploads/7e6acd16-9473-4454-abf3-291860fd6920.jpg" className="w-24 h-24 mx-auto mb-4 object-contain" />
               <h2 className="text-3xl font-bold mb-4">Find Your Scholarships</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Don't be scared Morty, just fill out the form below and our AI will find the best scholarships for you!
