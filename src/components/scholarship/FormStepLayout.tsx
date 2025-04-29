@@ -10,7 +10,6 @@ interface FormStepLayoutProps {
   children: ReactNode;
   title: string;
   description: string;
-  characterImage?: string;
   nextUrl?: string;
   prevUrl?: string;
   onNext?: () => void;
@@ -22,7 +21,6 @@ const FormStepLayout = ({
   children,
   title,
   description,
-  characterImage,
   nextUrl,
   prevUrl,
   onNext,
@@ -34,9 +32,11 @@ const FormStepLayout = ({
 
   const handleNext = () => {
     if (onNext) {
-      onNext();
-    }
-    if (nextUrl) {
+      const canProceed = onNext();
+      if (canProceed && nextUrl) {
+        navigate(nextUrl);
+      }
+    } else if (nextUrl) {
       navigate(nextUrl);
     }
   };
@@ -51,33 +51,23 @@ const FormStepLayout = ({
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-scholar-primary/10 to-scholar-accent/10">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
       <Head 
         title={`${title} | ScholarAI`}
         description={description}
       />
       
-      {/* Character image */}
-      {characterImage && (
-        <div className={`relative ${isMobile ? "h-[35vh]" : "h-[25vh]"} overflow-hidden bg-black/5`}>
-          <img
-            src={characterImage}
-            alt="Rick and Morty character"
-            className="absolute inset-0 w-full h-full object-cover opacity-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        </div>
-      )}
-      
       <div className="flex-1 flex flex-col px-4 py-8 max-w-lg mx-auto w-full">
         {/* Title and description */}
-        <div className={`text-center mb-8 ${characterImage ? "-mt-16 relative z-10" : ""}`}>
+        <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-scholar-primary mb-3">{title}</h1>
           <p className="text-lg text-gray-700">{description}</p>
         </div>
         
         {/* Content */}
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          {children}
+        </div>
         
         {/* Navigation buttons */}
         <div className="flex justify-between mt-8">

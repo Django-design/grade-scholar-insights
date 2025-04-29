@@ -26,12 +26,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#3CD861", // Bright green from portal
+          DEFAULT: "#4A6FDC", // More readable blue
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#86E229", // Lighter green from portal
-          foreground: "#000000",
+          DEFAULT: "#7B5DD1", // Purple
+          foreground: "#FFFFFF",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -42,7 +42,7 @@ export default {
           foreground: "#6B7280",
         },
         accent: {
-          DEFAULT: "#DAFC4A", // Yellow-green from portal
+          DEFAULT: "#FFC107", // Amber accent
           foreground: "#000000",
         },
         popover: {
@@ -64,15 +64,15 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         scholar: {
-          primary: "#3CD861", // Bright green from portal
-          secondary: "#86E229", // Lighter green from portal
-          accent: "#DAFC4A", // Yellow-green from portal
+          primary: "#4A6FDC", // Blue
+          secondary: "#7B5DD1", // Purple
+          accent: "#FFC107", // Amber
           muted: "#E5E7EB",
           text: "#1A1F2C",
-          portal: "#177F3D", // Darker green from portal
-          portalBg: "#0E4B24", // Even darker green for backgrounds
-          rick: "#75E6DA", // Blue for Rick's hair
-          morty: "#F9C74F" // Yellow for Morty's shirt
+          portal: "#4A6FDC", // Blue
+          portalBg: "#2D3748", // Dark slate
+          rick: "#75E6DA", 
+          morty: "#F9C74F"
         }
       },
       borderRadius: {

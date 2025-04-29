@@ -11,6 +11,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { ScholarshipFormProvider } from "./context/ScholarshipFormContext";
+import StudentLogin from "./pages/StudentLogin";
+import PartnerLogin from "./pages/PartnerLogin";
+import Universities from "./pages/Universities";
+import CostCalculator from "./pages/CostCalculator";
 
 // Form step pages
 import NameStep from "./pages/scholarship/NameStep";
@@ -48,6 +52,14 @@ const App = () => {
                   <Route path="/" element={<Index />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
+                  
+                  {/* Login Routes */}
+                  <Route path="/student-login" element={<StudentLogin />} />
+                  <Route path="/partner-login" element={<PartnerLogin />} />
+                  
+                  {/* Educational Resources Routes */}
+                  <Route path="/universities" element={<Universities />} />
+                  <Route path="/cost-calculator" element={<CostCalculator />} />
                   
                   {/* Scholarship Form Steps */}
                   <Route path="/scholarship">
