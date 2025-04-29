@@ -33,6 +33,13 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83% 53.3%;
 
+    /* Rick and Morty Theme Colors */
+    --rick-blue: 186 78% 65%;
+    --morty-yellow: 43 95% 65%;
+    --portal-green: 154 53% 31%;
+    --portal-bright: 142 69% 50%;
+    --portal-glow: 97 79% 57%;
+    
     --radius: 0.5rem;
   }
 
@@ -64,6 +71,13 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    
+    /* Rick and Morty Theme Colors - Dark Mode */
+    --rick-blue: 186 78% 45%;
+    --morty-yellow: 43 95% 55%;
+    --portal-green: 154 53% 21%;
+    --portal-bright: 142 69% 40%;
+    --portal-glow: 97 79% 47%;
   }
 }
 
@@ -74,6 +88,19 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Rick and Morty themed elements */
+  .rick-text {
+    @apply text-[#75E6DA] font-bold;
+  }
+  
+  .morty-text {
+    @apply text-[#F9C74F] font-bold;
+  }
+  
+  .portal-bg {
+    @apply bg-gradient-to-r from-scholar-portal via-scholar-primary to-scholar-accent;
   }
 }
 
@@ -101,5 +128,18 @@
   .complete:not(:first-child):before,
   .active:not(:first-child):before {
     @apply bg-scholar-secondary;
+  }
+  
+  /* Rick and Morty specific components */
+  .portal-button {
+    @apply bg-scholar-portal hover:bg-scholar-portal/90 text-white font-bold py-2 px-4 rounded transition-all duration-300 border-2 border-scholar-accent shadow-lg hover:shadow-scholar-accent/50;
+  }
+  
+  .rick-card {
+    @apply bg-[#75E6DA]/10 border-2 border-[#75E6DA] rounded-lg p-4 shadow-md;
+  }
+  
+  .morty-card {
+    @apply bg-[#F9C74F]/10 border-2 border-[#F9C74F] rounded-lg p-4 shadow-md;
   }
 }
