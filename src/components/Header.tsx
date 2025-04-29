@@ -1,5 +1,5 @@
 
-import { ChevronDown, GraduationCap, Menu, Search, University, Calculator, News, UserRound } from "lucide-react";
+import { ChevronDown, GraduationCap, Menu, Search, University, Calculator, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import {
